@@ -3,6 +3,7 @@
   height: 100px;
   background-color: purple;
   animation-name: 'rotate';
+  animation-duration: 0.7s;
 }
 
 @keyframes rotate {
