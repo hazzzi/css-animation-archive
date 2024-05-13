@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Effect</title>
+  <style>
+    .typing-demo {
+      width: 22ch; /* ch는 character, 글꼴 단위, 여기서는 22개의 단어를 포함하고 있다는 뜻 */
+      /* 
+        - steps(22): 22개의 단계로 typing 애니메이션을 실행
+        - 2s: 2초 동안 애니메이션을 실행
+        
+        - blink: border-color를 변경하여 깜빡이는 효과를 줌
+        - .5s: 0.5초 동안 애니메이션을 실행
+
+        - step-end: 애니메이션을 실행할 때 한 번에 한 단계씩 진행
+        - infinite: 애니메이션을 무한 반복
+        - alternate: 애니메이션을 순방향으로 실행한 다음 역방향으로 실행
+      */
+      animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid; /* 커서를 표현하기 위해 border-right를 사용 */
+      font-family: monospace;
+      font-size: 2em;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="typing-demo">
+      This is a typing demo.
+    </div>
+  </div>
+</body>
+</html>
